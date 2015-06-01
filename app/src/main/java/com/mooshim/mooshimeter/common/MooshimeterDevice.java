@@ -960,20 +960,20 @@ public class MooshimeterDevice {
     // Data conversion
     //////////////////////////////////////
 
-    public static final int METER_MEASURE_SETTINGS_ISRC_ON         = 0x01;
-    public static final int METER_MEASURE_SETTINGS_ISRC_LVL        = 0x02;
-    public static final int METER_MEASURE_SETTINGS_ACTIVE_PULLDOWN = 0x04;
+    public static final int METER_MEASURE_SETTINGS_ISRC_ON         = 0x01;// key in byte [0000 0001]
+    public static final int METER_MEASURE_SETTINGS_ISRC_LVL        = 0x02;// key in byte [0000 0010]
+    public static final int METER_MEASURE_SETTINGS_ACTIVE_PULLDOWN = 0x04;// key in byte [0000 0100]
     
-    public static final int METER_CALC_SETTINGS_DEPTH_LOG2 = 0x0F;
-    public static final int METER_CALC_SETTINGS_MEAN       = 0x10;
-    public static final int METER_CALC_SETTINGS_ONESHOT    = 0x20;
-    public static final int METER_CALC_SETTINGS_MS         = 0x40;
+    public static final int METER_CALC_SETTINGS_DEPTH_LOG2 = 0x0F;// key in byte [0000 1111]
+    public static final int METER_CALC_SETTINGS_MEAN       = 0x10;// key in byte [0001 0000]
+    public static final int METER_CALC_SETTINGS_ONESHOT    = 0x20;// key in byte [0010 0000]
+    public static final int METER_CALC_SETTINGS_MS         = 0x40;// key in byte [0100 0000]
     
-    public static final int ADC_SETTINGS_SAMPLERATE_MASK = 0x07;
-    public static final int ADC_SETTINGS_GPIO_MASK = 0x30;
+    public static final int ADC_SETTINGS_SAMPLERATE_MASK = 0x07;// key in byte [0000 0111]
+    public static final int ADC_SETTINGS_GPIO_MASK = 0x30;// key in byte [0011 0000]
     
-    public static final int METER_CH_SETTINGS_PGA_MASK = 0x70;
-    public static final int METER_CH_SETTINGS_INPUT_MASK = 0x0F;
+    public static final int METER_CH_SETTINGS_PGA_MASK = 0x70;// key in byte [0111 0000]
+    public static final int METER_CH_SETTINGS_INPUT_MASK = 0x0F;// key in byte [0000 1111] same key in line 967 ????
 
     public class SignificantDigits {
         public int high;
